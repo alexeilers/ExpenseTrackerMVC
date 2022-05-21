@@ -24,5 +24,24 @@ namespace InAndOut.Controllers
             IEnumerable<Item> objList = _context.Items;
             return View(objList);
         }
+
+
+        //GET CREATE
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        //POST CREATE
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Item obj)
+        {
+            _context.Items.Add(obj);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
