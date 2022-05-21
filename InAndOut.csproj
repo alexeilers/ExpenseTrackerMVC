@@ -22,11 +22,13 @@
     <None Remove="Data\" />
     <None Remove="Migrations\" />
     <None Remove="Views\Item\" />
+    <None Remove="Views\Expense\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Appointment\" />
     <Folder Include="Data\" />
     <Folder Include="Migrations\" />
     <Folder Include="Views\Item\" />
+    <Folder Include="Views\Expense\" />
   </ItemGroup>
 </Project>
