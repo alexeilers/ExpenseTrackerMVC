@@ -9,11 +9,15 @@ namespace InAndOut.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [Required]
+        [Range(1, int.MaxValue, ErrorMessage ="Amount must be greater than 0")]
         public double Amount { get; set; }
 
         [DisplayName("Due Date")]
+        [Required]
         public int DueDate { get; set; }
     }
 }
