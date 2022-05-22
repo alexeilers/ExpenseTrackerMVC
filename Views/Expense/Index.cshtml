@@ -33,7 +33,7 @@
                 {
                 <tr>
                     <td width="30%">@item.Name</td>
-                    <td width="30%">@item.Amount</td>
+                    <td width="30%">$@item.Amount</td>
                     <td width="30%">@item.DueDate</td>
                     <td width="30%">
                         <div class="w-100 btn-group" role="group">
@@ -43,6 +43,20 @@
                     </td>
                 </tr>
                 }
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Total Expenses:
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="100%">$@Model.Sum(i => i.Amount)</td>
+                </tr>
             </tbody>
         </table>
     }

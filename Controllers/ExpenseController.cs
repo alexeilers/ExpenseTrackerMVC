@@ -21,7 +21,8 @@ namespace InAndOut.Controllers
         public IActionResult Index()
         {
             IEnumerable<Expense> objList = _context.Expenses;
-            return View(objList.OrderBy(objList => objList.DueDate).Take(10).ToList());
+            return View(objList.OrderBy(objList => objList.DueDate).ToList());
+
         }
 
 
